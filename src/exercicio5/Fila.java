@@ -22,7 +22,7 @@ public class Fila {
         obp.setProximo(null);
         if (eVazia()) {            
             fim = obp;
-            fim.setProximo(fim);
+            fim.setProximo(obp);
         } else {
             obp.setProximo(fim.getProximo());
             fim.setProximo(obp);
@@ -58,10 +58,9 @@ public class Fila {
             System.out.println("Não Há elementos na fila");
         }else{
             System.out.println("Elementos na Fila");
-            Pessoa aux = fim;
-            fim = aux.getProximo();
-            
-            while(aux != fim){
+            Pessoa aux = fim.getProximo();
+                           
+            while(aux != fim ){
                 System.out.println(aux);
                 aux = aux.getProximo();
             }

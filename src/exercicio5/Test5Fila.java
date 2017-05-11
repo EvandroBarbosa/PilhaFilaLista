@@ -14,7 +14,7 @@ public class Test5Fila {
         
         String n, cpf, tl;
         
-        for (int i = 0; i < 2; i++) {            
+        for (int i = 0; i < 4; i++) {            
             System.out.println("Digite o nome da Pessoa");
             n = ent.next();
             System.out.println("Informe o CPF");
@@ -26,6 +26,14 @@ public class Test5Fila {
             
             fila.enfileirar(ps);
         }
+        fila.mostrarFila();
+        ps = fila.desifileirar();
+        if (ps == null) {
+            System.out.println("Elemento não existe");
+        }else{
+            System.out.println("O elemento excluir foi "+ps);
+        }
+       
         fila.mostrarFila();
     }
 }
